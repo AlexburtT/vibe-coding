@@ -2,7 +2,7 @@ const app = document.getElementById('app');
 
 const showLogin = () => {
 	app.innerHTML = `
-		<form class="form">
+		<form class="contaiter">
         	<h1>Авторизация</h1>
         	<input type="text" id="email" placeholder="Email" required />
        		<input type="password" id="password" placeholder="Пароль" required />
@@ -60,13 +60,13 @@ const showDashboard = async () => {
 
 	const data = await res.json();
 
-	app.innerHTML = `
-    <div class="container">
+	app.innerHTML = `    
+	<img class="moscow" src="moscow.jpg" alt="Москва" />
       <h1>Прогноз погоды в Москве</h1>
+	  <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="Погода" />
       <p>🌡 Температура: ${Math.round(data.main.temp)} °C</p>
       <p>☁️ Условия: ${data.weather[0].description}</p>
-      <p>🌬 Скорость ветра: ${data.wind.speed} м/с</p>
-    </div>
+      <p>🌬 Скорость ветра: ${data.wind.speed} м/с</p>    
   `;
 }
 
