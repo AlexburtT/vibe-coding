@@ -139,5 +139,9 @@ button:hover {
 			font-size: 1rem;
 			text-align: center;
 		}
+
+		.moscow {
+			transform: scale(0.5);
+		}
 	}
 }
