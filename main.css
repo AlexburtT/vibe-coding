@@ -38,23 +38,31 @@ body {
 	place-items: center;
 }
 
-h1 {
-	font-size: 3rem;
-	font-weight: 900;
-	color: var(--blue);
-	text-align: center;
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+
+	h1 {
+		font-size: 2rem;
+		font-weight: 600;
+		color: var(--blue);
+	}
 }
 
 input[type="text"],
 input[type="password"] {
-	width: 80%;
+	width: 100%;
 	padding: 1rem;
 	border: 1px solid #ccc;
 	border-radius: 1rem;
+	color: var(--dark-light);
 }
 
 button {
-	width: 80%;
+	width: 100%;
 	padding: 1rem;
 	margin: 1rem 0;
 	background-color: var(--blue);
@@ -74,7 +82,7 @@ button:hover {
 }
 
 .container {
-	max-width: 600px;
+	width: 37.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -108,17 +116,24 @@ button:hover {
 }
 
 @media (width < 600px) {
+	main {
+		width: 100%;
+	}
+
 	.container {
-		padding: 2rem;
+		width: 100%;
+		padding: 3rem;
 		background: none;
 		box-shadow: none;
 
 		h1 {
 			font-size: 1.5rem;
+			text-align: center;
 		}
 
 		p {
 			font-size: 1rem;
+			text-align: center;
 		}
 	}
 }

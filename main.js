@@ -2,7 +2,7 @@ const app = document.getElementById('app');
 
 const showLogin = () => {
 	app.innerHTML = `
-		<form class="contaiter">
+		<form class="form">
         	<h1>Авторизация</h1>
         	<input type="text" id="email" placeholder="Email" required />
        		<input type="password" id="password" placeholder="Пароль" required />
